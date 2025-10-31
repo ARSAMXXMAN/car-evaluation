@@ -32,6 +32,31 @@ if language == "English":
     dict_out = {0: 'Unacceptable', 1: 'Acceptable', 2: 'Good', 3: 'Very Good'}
     predict_button = "Predict"
 
+elif language=="فارسی":
+    st.title("مدل ارزیابی ماشین‌ها - نسخه فارسی")
+    st.write("لطفاً اطلاعات ماشین خود را وارد کنید")
+
+    dict_buy = {'کم': 0, 'متوسط': 1, 'زیاد': 2, 'خیلی زیاد': 3}
+    buy = st.radio("میزان قیمت ماشین", dict_buy.keys())
+
+    dict_maint = {'کم': 0, 'متوسط': 1, 'زیاد': 2, 'خیلی زیاد': 3}
+    maint = st.radio("هزینه نگهداری ماشین", dict_maint.keys())
+
+    dict_doors = {'۲': 0, '۳': 1, '۴': 2, 'بیشتر از ۵': 3}
+    doors = st.radio("تعداد درهای ماشین", dict_doors.keys())
+
+    dict_persons = {'۲': 0, '۴': 1, 'بیشتراز۴': 2}
+    persons = st.radio("ظرفیت ماشین", dict_persons.keys())
+
+    dict_lug_boot = {'کوچک': 0, 'متوسط': 1, 'بزرگ': 2}
+    lug_boot = st.radio("اندازه صندوق عقب", dict_lug_boot.keys())
+
+    dict_safety = {'کم': 0, 'متوسط': 1, 'زیاد': 2}
+    safety = st.radio("سطح ایمنی ماشین", dict_safety.keys())
+
+    dict_out = {0: 'نامناسب', 1: 'مناسب', 2: 'خوب', 3: 'خیلی خوب'}
+    predict_button = "پیش‌بینی کن"
+
 elif language == "Deutsch":
     st.title("Auto-Bewertungsmodell - Deutsch")
     st.write("Bitte geben Sie Ihre Fahrzeugdaten ein")
